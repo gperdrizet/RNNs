@@ -44,7 +44,7 @@
 			],
 			
 			// Disable automatic port forwarding to give explicit control
-			"remote.restoreForwardedPorts": false,
+			"remote.restoreForwardedPorts": false
 
 		},
 
