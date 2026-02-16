@@ -8,7 +8,7 @@
 	"name": "Sequence learning",
 	"image": "gperdrizet/deeplearning-gpu",
     "runArgs": [
-		"--gpus", "all",              // Enable all available GPUs in the container
+		"--gpus", "1",                // Enable all available GPUs in the container
 		"--pid=host",                 // Use host PIDs, needed for nvidia-smi process list
 		"--ipc=host",                 // Connect to host interprocess namespace
 		"--ulimit", "memlock=-1",     // Turn of memory lock limit
