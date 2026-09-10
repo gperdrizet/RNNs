@@ -6,9 +6,9 @@
 	// See here: https://hub.docker.com/r/gperdrizet/deeplearning-gpu
     // And here: https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel-24-06.html
 	"name": "Sequence learning",
-	"image": "gperdrizet/deeplearning-gpu",
+	"image": "gperdrizet/deeplearning-nvidia",
     "runArgs": [
-		"--gpus", "all",              // Enable all available GPUs in the container
+		"--gpus", "device=0",         // Choose which GPU(s) to make available to the container
 		"--pid=host",                 // Use host PIDs, needed for nvidia-smi process list
 		"--ipc=host",                 // Connect to host interprocess namespace
 		"--ulimit", "memlock=-1",     // Turn of memory lock limit
