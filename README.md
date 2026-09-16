@@ -27,9 +27,6 @@ An introduction to Recurrent Neural Networks (RNNs) for sequence modeling tasks.
    ```
 
 2. Open in VS Code:
-   ```bash
-   code .
-   ```
 
 3. When prompted, click **"Reopen in Container"** (or use the command palette: `Dev Containers: Reopen in Container`).
 
@@ -37,10 +34,26 @@ An introduction to Recurrent Neural Networks (RNNs) for sequence modeling tasks.
 
 5. Open a notebook and run the cells.
 
-### Data
+### Tensorboard
 
-The sentiment analysis notebooks use the SemEval-2017 Task 4 Twitter dataset. The GloVe embeddings (~1.5GB) will be downloaded automatically on first run.
+To view the demo training runs in TensorBoard visit [http://localhost:6006/] while the devcontainer is running.
 
-## Data source
+## Data
 
-https://alt.qcri.org/semeval2017/task4/index.php?id=data-and-tools
+### Twitter
+
+The sentiment analysis notebooks use the [SemEval-2017 Task 4 Twitter dataset](https://alt.qcri.org/semeval2017/task4/index.php?id=data-and-tools)<sup>1</sup>. The data was parsed and assembled into a single parquet file for easy loading using the script [`src/format_data.py`](https://github.com/gperdrizet/RNNs/blob/main/src/format_data.py).
+
+### Tokenization
+
+The demo notebooks use the Twitter specific [NLTK TweetTokenizer](https://www.nltk.org/api/nltk.tokenize.casual.html#nltk.tokenize.casual.TweetTokenizer).
+
+### Embeddings
+
+The [GloVe](https://nlp.stanford.edu/projects/glove)<sup>2</sup> Twitter embeddings (~1.5GB) will also be downloaded automatically on first run.
+
+## References
+
+1. Sara Rosenthal, Noura Farra, and Preslav Nakov. 2017. [SemEval-2017 Task 4: Sentiment Analysis in Twitter](https://alt.qcri.org/semeval2017/task4/index.php?id=data-and-tools). In *Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)*, pages 502–518, Vancouver, Canada. Association for Computational Linguistics.
+
+2. Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf). In *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, pages 1532–1543, Doha, Qatar. Association for Computational Linguistics.
