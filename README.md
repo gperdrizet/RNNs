@@ -20,6 +20,8 @@ An introduction to Recurrent Neural Networks (RNNs) for sequence modeling tasks.
 
 ### Setup
 
+The demos are intended to run in a devcontainer development environment using VS code. The RNNs demo environment is derived from the [gperdrizet/deeplearning-devcontainer](https://github.com/gperdrizet/deeplearning-devcontainer) template repository and uses the `deeplearning-nvidia` base image from [gperdrizet/docker-images](https://github.com/gperdrizet/docker-images).
+
 1. Clone the repository:
    ```bash
    git clone <repository-url>
