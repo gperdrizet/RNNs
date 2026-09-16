@@ -38,7 +38,7 @@ The demos are intended to run in a devcontainer development environment using VS
 
 ### Tensorboard
 
-To view the demo training runs in TensorBoard visit [http://localhost:6006/] while the devcontainer is running.
+To view the demo training runs in TensorBoard visit http://localhost:6006 while the devcontainer is running.
 
 ## Data
 
