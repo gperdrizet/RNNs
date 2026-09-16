@@ -13,8 +13,6 @@
 		"--ipc=host",                 // Connect to host interprocess namespace
 		"--ulimit", "memlock=-1",     // Turn of memory lock limit
 		"--ulimit", "stack=67108864", // Increase process stack limit to 64 MB
-		// "--publish", "6006:6006",  // Map TensorBoard port for easy access
-		// "--publish", "8080:8080",  // Map Optuna port for easy access
 		"--network=bridge"            // Explicitly use bridge network for internet access
 	],
 	"remoteUser": "vscode",           // Use the 'vscode' user provided by the base image
@@ -56,7 +54,7 @@
 		  "ms-toolsai.jupyter",                     // Jupyter notebook support for interactive data science
 		  "streetsidesoftware.code-spell-checker",  // Spell checking for code and documentation
 		  "ms-toolsai.tensorboard",                 // TensorBoard extension
-		  "optuna.optuna-dashboard"                 // Optuna dashbooard extension
+		  "optuna.optuna-dashboard"                 // Optuna dashboard extension
 		]
 	  }
 	},
@@ -66,7 +64,7 @@
 	"onCreateCommand": "",
 
 	// Use 'postCreateCommand' to run commands once after the container is created
-	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data && pip install -r requirements.txt",
+	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data && pip install --force-reinstall --no-deps keras==3.6.0 && pip install -r requirements.txt",
 
 	// Use 'postAttachCommand' to run TensorBoard
 	"postAttachCommand": ""
