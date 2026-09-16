@@ -8,7 +8,7 @@
 	"name": "RNNs demo",
 	"image": "gperdrizet/deeplearning-nvidia:7.0.1",
     "runArgs": [
-		"--gpus", "device=1",         // Choose which GPU(s) to make available to the container
+		"--gpus", "device=0",         // Choose which GPU(s) to make available to the container
 		"--pid=host",                 // Use host PIDs, needed for nvidia-smi process list
 		"--ipc=host",                 // Connect to host interprocess namespace
 		"--ulimit", "memlock=-1",     // Turn of memory lock limit
